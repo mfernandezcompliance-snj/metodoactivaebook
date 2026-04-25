@@ -32,9 +32,14 @@ import {
   Rocket,
   AlertTriangle,
 } from "lucide-react";
+import { PortfolioBanner } from "@/components/PortfolioBanner";
+import { AuditFloatingButton } from "@/components/AuditFloatingButton";
+import { CookieBanner } from "@/components/CookieBanner";
+import { PrivacyLink, TermsLink } from "@/components/LegalModals";
 import logo from "@/assets/logo.png";
 import ebookMockup from "@/assets/ebook-mockup.png";
 import bonosPack from "@/assets/bonos-pack.png";
+import bono1 from "@/assets/bono-1.png";
 import bono2 from "@/assets/bono-2.png";
 import bono3 from "@/assets/bono-3.png";
 import bono4 from "@/assets/bono-4.png";
@@ -248,8 +253,7 @@ const Benefits = () => (
 const bonuses = [
   {
     n: "1",
-    img: null,
-    icon: Gift,
+    img: bono1,
     title: 'El Menú de Vida Real',
     sub: 'Pack "Manos a la Obra"',
     desc: 'La respuesta definitiva al "¡Estoy aburrido!". Desafíos estratégicos que activan la dopamina real mientras tú cocinas o descansas.',
@@ -306,7 +310,7 @@ const Bonuses = () => (
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {bonuses.map(({ n, img, icon: Icon, title, sub, desc }) => (
+        {bonuses.map(({ n, img, title, sub, desc }) => (
           <div
             key={n}
             className="bg-cream-deep rounded-3xl p-6 shadow-soft hover:shadow-card transition-smooth hover:-translate-y-1 flex flex-col"
@@ -322,17 +326,11 @@ const Bonuses = () => (
               </div>
             </div>
 
-            {img ? (
+            {img && (
               <div className="my-4 flex justify-center">
                 <img src={img} alt={`Bono ${n}: ${title}`} className="h-44 w-auto object-contain" />
               </div>
-            ) : Icon ? (
-              <div className="my-4 flex justify-center">
-                <div className="h-44 w-32 rounded-xl gradient-sage flex items-center justify-center">
-                  <Icon className="h-16 w-16 text-petrol" strokeWidth={1.8} />
-                </div>
-              </div>
-            ) : null}
+            )}
 
             <p className="text-foreground/80 leading-relaxed text-sm mt-auto">{desc}</p>
           </div>
@@ -753,31 +751,28 @@ const Footer = () => (
         © 2026 Pinceles de Palabras. Todos los derechos reservados.
       </p>
       <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center text-sm mb-6">
+        <PrivacyLink className="text-primary-foreground/80 hover:text-gold transition-smooth underline-offset-4 hover:underline cursor-pointer" />
+        <TermsLink className="text-primary-foreground/80 hover:text-gold transition-smooth underline-offset-4 hover:underline cursor-pointer" />
         <a
-          href="https://elmetodoactiva.vercel.app/politicas-de-privacidad"
-          className="text-primary-foreground/80 hover:text-gold transition-smooth"
-        >
-          Políticas de Privacidad
-        </a>
-        <a
-          href="https://elmetodoactiva.vercel.app/terminos-y-condiciones"
-          className="text-primary-foreground/80 hover:text-gold transition-smooth"
-        >
-          Términos y Condiciones
-        </a>
-        <a
-          href="https://elmetodoactiva.vercel.app/contacto"
+          href="mailto:pincelesdepalabras@gmail.com"
           className="text-primary-foreground/80 hover:text-gold transition-smooth"
         >
           Contacto
         </a>
       </div>
-      <p className="text-xs text-primary-foreground/60 leading-relaxed max-w-3xl mx-auto">
+      <p className="text-xs text-primary-foreground/60 leading-relaxed max-w-3xl mx-auto mb-6">
         Este producto es comercializado con el apoyo de Hotmart. La plataforma no realiza control
         editorial previo de los productos aquí comercializados, ni evalúa el tecnicismo o la
         experiencia de quienes los elaboran. La existencia de un producto y su adquisición no pueden
         ser consideradas como garantía de calidad de contenido y resultado, en ningún caso.
       </p>
+      <div className="border-t border-primary-foreground/10 pt-5 mt-2">
+        <p className="text-xs text-primary-foreground/60">
+          Diseño conceptual de portafolio por{" "}
+          <strong className="text-gold">MF Web Design &amp; Compliance</strong>. Producto real y
+          propiedad de Pinceles de Palabras.
+        </p>
+      </div>
     </div>
   </footer>
 );
@@ -786,6 +781,7 @@ const Footer = () => (
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
+      <PortfolioBanner />
       <Header />
       <Hero />
       <Manifesto />
@@ -800,6 +796,8 @@ const Index = () => {
       <FinalCta />
       <Faq />
       <Footer />
+      <AuditFloatingButton />
+      <CookieBanner />
     </main>
   );
 };
