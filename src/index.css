@@ -6,61 +6,63 @@
 
 @layer base {
   :root {
-    /* Brand palette - warm artisan vibe */
-    --background: 40 50% 97%;            /* cream */
-    --foreground: 25 30% 20%;            /* warm brown */
+    /* Pastel palette inspired by ebook cover */
+    --background: 45 60% 97%;            /* soft cream */
+    --foreground: 197 35% 22%;           /* deep petrol for text */
 
     --card: 0 0% 100%;
-    --card-foreground: 25 30% 20%;
+    --card-foreground: 197 35% 22%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 25 30% 20%;
+    --popover-foreground: 197 35% 22%;
 
-    /* Primary - deep teal/petrol blue from ebook cover */
-    --primary: 197 45% 25%;
-    --primary-foreground: 40 50% 97%;
+    /* Primary - softened petrol/teal from cover title */
+    --primary: 195 40% 32%;
+    --primary-foreground: 45 60% 97%;
 
-    /* Secondary - sage green from badges */
-    --secondary: 105 18% 65%;
-    --secondary-foreground: 197 45% 20%;
+    /* Secondary - pastel mint/sage */
+    --secondary: 150 35% 82%;
+    --secondary-foreground: 195 40% 25%;
 
-    --muted: 40 30% 92%;
-    --muted-foreground: 25 20% 40%;
+    --muted: 40 40% 94%;
+    --muted-foreground: 197 18% 42%;
 
-    /* Accent - warm terracotta for CTAs */
-    --accent: 24 60% 55%;
-    --accent-foreground: 40 50% 97%;
+    /* Accent - pastel peach for CTAs */
+    --accent: 22 80% 72%;
+    --accent-foreground: 197 45% 22%;
 
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 40 50% 97%;
+    --destructive: 0 60% 65%;
+    --destructive-foreground: 45 60% 97%;
 
-    --border: 30 25% 85%;
-    --input: 30 25% 85%;
-    --ring: 24 60% 55%;
+    --border: 150 25% 86%;
+    --input: 150 25% 86%;
+    --ring: 22 80% 72%;
 
     --radius: 1rem;
 
-    /* Custom semantic tokens */
-    --cream: 40 50% 97%;
-    --cream-deep: 38 40% 93%;
-    --sage: 105 18% 65%;
-    --sage-deep: 130 18% 50%;
-    --terracotta: 24 60% 55%;
-    --terracotta-deep: 20 65% 45%;
-    --petrol: 197 45% 25%;
-    --gold: 35 65% 55%;
+    /* Custom semantic tokens — all pastel */
+    --cream: 45 60% 97%;
+    --cream-deep: 42 55% 92%;
+    --sage: 150 35% 82%;          /* pastel mint */
+    --sage-deep: 155 30% 65%;     /* mid sage */
+    --terracotta: 22 80% 72%;     /* pastel peach */
+    --terracotta-deep: 18 65% 60%;/* warm coral */
+    --petrol: 195 40% 32%;        /* deep teal (text/contrast) */
+    --gold: 42 85% 75%;           /* pastel buttercup */
+    --sky: 200 70% 86%;           /* pastel sky blue */
 
-    /* Gradients */
-    --gradient-warm: linear-gradient(135deg, hsl(40 50% 97%) 0%, hsl(38 40% 93%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(24 60% 55%) 0%, hsl(20 65% 45%) 100%);
-    --gradient-petrol: linear-gradient(135deg, hsl(197 45% 25%) 0%, hsl(197 50% 18%) 100%);
-    --gradient-sage: linear-gradient(135deg, hsl(105 18% 70%) 0%, hsl(130 18% 55%) 100%);
+    /* Gradients - all pastel */
+    --gradient-warm: linear-gradient(135deg, hsl(45 60% 97%) 0%, hsl(42 55% 92%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(22 80% 75%) 0%, hsl(18 70% 65%) 100%);
+    --gradient-petrol: linear-gradient(135deg, hsl(195 40% 32%) 0%, hsl(197 45% 24%) 100%);
+    --gradient-sage: linear-gradient(135deg, hsl(150 40% 86%) 0%, hsl(155 32% 72%) 100%);
+    --gradient-sky: linear-gradient(135deg, hsl(200 70% 90%) 0%, hsl(150 40% 86%) 100%);
 
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(25 30% 20% / 0.08);
-    --shadow-card: 0 8px 30px -8px hsl(25 30% 20% / 0.12);
-    --shadow-cta: 0 10px 30px -8px hsl(24 60% 45% / 0.45);
-    --shadow-glow: 0 0 40px hsl(35 65% 65% / 0.4);
+    /* Shadows - softer */
+    --shadow-soft: 0 4px 20px -4px hsl(195 35% 22% / 0.06);
+    --shadow-card: 0 8px 30px -8px hsl(195 35% 22% / 0.10);
+    --shadow-cta: 0 10px 30px -8px hsl(22 70% 55% / 0.30);
+    --shadow-glow: 0 0 40px hsl(42 85% 78% / 0.45);
 
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
