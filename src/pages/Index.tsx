@@ -310,7 +310,7 @@ const Bonuses = () => (
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {bonuses.map(({ n, img, icon: Icon, title, sub, desc }) => (
+        {bonuses.map(({ n, img, title, sub, desc }) => (
           <div
             key={n}
             className="bg-cream-deep rounded-3xl p-6 shadow-soft hover:shadow-card transition-smooth hover:-translate-y-1 flex flex-col"
@@ -326,17 +326,11 @@ const Bonuses = () => (
               </div>
             </div>
 
-            {img ? (
+            {img && (
               <div className="my-4 flex justify-center">
                 <img src={img} alt={`Bono ${n}: ${title}`} className="h-44 w-auto object-contain" />
               </div>
-            ) : Icon ? (
-              <div className="my-4 flex justify-center">
-                <div className="h-44 w-32 rounded-xl gradient-sage flex items-center justify-center">
-                  <Icon className="h-16 w-16 text-petrol" strokeWidth={1.8} />
-                </div>
-              </div>
-            ) : null}
+            )}
 
             <p className="text-foreground/80 leading-relaxed text-sm mt-auto">{desc}</p>
           </div>
