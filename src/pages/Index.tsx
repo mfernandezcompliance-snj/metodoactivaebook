@@ -200,11 +200,19 @@ const Method = () => (
           castigos y sin sentirte culpable.
         </p>
       </div>
+
+      <div className="mt-14 max-w-2xl mx-auto">
+        <img
+          src={familiaJugando}
+          alt="Familia jugando junta en el suelo con bloques, libros y juegos de mesa"
+          className="w-full rounded-3xl shadow-card"
+          loading="lazy"
+        />
+      </div>
     </div>
   </section>
 );
 
-/* ---------- BENEFICIOS ---------- */
 const benefits = [
   { icon: Heart, title: "Conexión Real", desc: "Actividades que crean vínculos profundos entre padres e hijos." },
   { icon: Palette, title: "Creatividad", desc: "Juegos que despiertan la imaginación sin necesidad de tecnología." },
