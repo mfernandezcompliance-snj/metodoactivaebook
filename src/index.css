@@ -28,8 +28,9 @@
     --muted-foreground: 197 18% 42%;
 
     /* Accent - pastel peach for CTAs */
-    --accent: 22 80% 72%;
-    --accent-foreground: 197 45% 22%;
+    /* Accent - salmon for CTAs (high readability with white text) */
+    --accent: 8 75% 65%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 60% 65%;
     --destructive-foreground: 45 60% 97%;
