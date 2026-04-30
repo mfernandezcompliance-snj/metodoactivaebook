@@ -62,7 +62,7 @@
     /* Shadows - softer */
     --shadow-soft: 0 4px 20px -4px hsl(195 35% 22% / 0.06);
     --shadow-card: 0 8px 30px -8px hsl(195 35% 22% / 0.10);
-    --shadow-cta: 0 10px 30px -8px hsl(22 70% 55% / 0.30);
+    --shadow-cta: 0 10px 30px -8px hsl(8 70% 50% / 0.35);
     --shadow-glow: 0 0 40px hsl(42 85% 78% / 0.45);
 
     /* Transitions */
