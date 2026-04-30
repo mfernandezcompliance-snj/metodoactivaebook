@@ -23,6 +23,7 @@ export const CtaButton = ({
   size = "lg",
   variant = "primary",
   showArrow = true,
+  href,
 }: CtaButtonProps) => {
   const base =
     "inline-flex items-center justify-center gap-3 font-semibold rounded-full transition-bounce hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent/40 text-center";
@@ -35,7 +36,7 @@ export const CtaButton = ({
 
   return (
     <a
-      href={HOTMART_CHECKOUT_URL}
+      href={href ?? HOTMART_CHECKOUT_URL}
       target="_blank"
       rel="noopener noreferrer"
       className={cn(base, sizes[size], variants[variant], className)}
