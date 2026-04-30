@@ -47,14 +47,7 @@ import bono5 from "@/assets/bono-5.png";
 import badgeGarantia from "@/assets/badge-garantia.png";
 import badgePagoSeguro from "@/assets/badge-pago-seguro.png";
 
-/* ---------- HEADER ---------- */
-const Header = () => (
-  <header className="w-full bg-cream/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-40">
-    <div className="container flex items-center justify-center py-3">
-      <img src={logo} alt="Pinceles de Palabras Ebooks" className="h-14 md:h-16 w-auto" />
-    </div>
-  </header>
-);
+/* Header eliminado por petición del usuario (sin cintillo sticky). */
 
 /* ---------- HERO ---------- */
 const Hero = () => (
@@ -701,9 +694,6 @@ const Faq = () => (
   <section className="py-20 md:py-28 bg-cream-deep">
     <div className="container max-w-3xl">
       <div className="text-center mb-12">
-        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sage/30 text-petrol text-sm font-bold mb-4">
-          <AlertTriangle className="h-4 w-4" /> DESPEJA TUS DUDAS
-        </span>
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary">
           Preguntas <span className="text-terracotta-deep">Frecuentes</span>
         </h2>
