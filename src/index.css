@@ -16,9 +16,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: 197 35% 22%;
 
-    /* Primary - pastel sky blue (replaces petrol) */
-    --primary: 200 70% 70%;
-    --primary-foreground: 200 50% 18%;
+    /* Primary - icy pastel blue (soft, readable) */
+    --primary: 200 55% 86%;
+    --primary-foreground: 200 45% 20%;
 
     /* Secondary - pastel mint/sage */
     --secondary: 150 35% 82%;
@@ -47,16 +47,16 @@
     --sage-deep: 155 30% 65%;     /* mid sage */
     --terracotta: 22 80% 72%;     /* pastel peach */
     --terracotta-deep: 18 65% 60%;/* warm coral */
-    --petrol: 200 75% 78%;        /* pastel sky blue (was deep teal) */
+    --petrol: 200 55% 88%;        /* icy pastel blue (very soft) */
     --gold: 42 85% 75%;           /* pastel buttercup */
-    --sky: 200 70% 86%;           /* pastel sky blue */
+    --sky: 200 60% 92%;           /* almost white sky */
 
     /* Gradients - all pastel */
     --gradient-warm: linear-gradient(135deg, hsl(45 60% 97%) 0%, hsl(42 55% 92%) 100%);
     --gradient-cta: linear-gradient(135deg, hsl(22 80% 75%) 0%, hsl(18 70% 65%) 100%);
-    --gradient-petrol: linear-gradient(135deg, hsl(200 75% 82%) 0%, hsl(200 65% 70%) 100%);
+    --gradient-petrol: linear-gradient(135deg, hsl(200 60% 92%) 0%, hsl(200 50% 84%) 100%);
     --gradient-sage: linear-gradient(135deg, hsl(150 40% 86%) 0%, hsl(155 32% 72%) 100%);
-    --gradient-sky: linear-gradient(135deg, hsl(200 70% 90%) 0%, hsl(150 40% 86%) 100%);
+    --gradient-sky: linear-gradient(135deg, hsl(200 60% 94%) 0%, hsl(150 40% 90%) 100%);
 
     /* Shadows - softer */
     --shadow-soft: 0 4px 20px -4px hsl(195 35% 22% / 0.06);
