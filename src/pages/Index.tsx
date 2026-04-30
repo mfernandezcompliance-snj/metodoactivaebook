@@ -424,7 +424,7 @@ const Pricing = () => {
                 <span>Los 5 bonos tácticos</span>
               </li>
             </ul>
-            <CtaButton variant="outline" size="lg" className="w-full" showArrow={false}>
+            <CtaButton href="https://pay.hotmart.com/S104739377Y?checkoutMode=10" variant="outline" size="lg" className="w-full" showArrow={false}>
               Quiero el básico
             </CtaButton>
           </div>
