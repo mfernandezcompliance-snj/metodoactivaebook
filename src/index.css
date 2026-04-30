@@ -54,7 +54,7 @@
 
     /* Gradients - all pastel */
     --gradient-warm: linear-gradient(135deg, hsl(45 60% 97%) 0%, hsl(42 55% 92%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(22 80% 75%) 0%, hsl(18 70% 65%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(8 80% 68%) 0%, hsl(6 70% 55%) 100%);
     --gradient-petrol: linear-gradient(135deg, hsl(200 60% 92%) 0%, hsl(200 50% 84%) 100%);
     --gradient-sage: linear-gradient(135deg, hsl(150 40% 86%) 0%, hsl(155 32% 72%) 100%);
     --gradient-sky: linear-gradient(135deg, hsl(200 60% 94%) 0%, hsl(150 40% 90%) 100%);
