@@ -46,8 +46,8 @@ import bono4 from "@/assets/bono-4.png";
 import bono5 from "@/assets/bono-5.png";
 import badgeGarantia from "@/assets/badge-garantia.png";
 import badgePagoSeguro from "@/assets/badge-pago-seguro.png";
-
-/* Header eliminado por petición del usuario (sin cintillo sticky). */
+import ninosCorriendo from "@/assets/ninos-corriendo.jpg";
+import familiaJugando from "@/assets/familia-jugando.png";
 
 /* ---------- HERO ---------- */
 const Hero = () => (
