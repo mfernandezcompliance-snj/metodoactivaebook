@@ -746,13 +746,16 @@ const Faq = () => (
 const Footer = () => (
   <footer className="bg-petrol text-primary-foreground py-12">
     <div className="container max-w-4xl text-center">
-      <img src={logo} alt="Pinceles de Palabras" className="h-16 mx-auto mb-4 brightness-0 invert opacity-90" />
+      <div className="inline-flex items-center justify-center bg-cream rounded-3xl p-4 mb-5 shadow-soft">
+        <img src={logo} alt="Pinceles de Palabras" className="h-20 w-auto" />
+      </div>
       <p className="text-sm text-primary-foreground/70 mb-4">
         © 2026 Pinceles de Palabras. Todos los derechos reservados.
       </p>
       <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center text-sm mb-6">
         <PrivacyLink className="text-primary-foreground/80 hover:text-gold transition-smooth underline-offset-4 hover:underline cursor-pointer" />
         <TermsLink className="text-primary-foreground/80 hover:text-gold transition-smooth underline-offset-4 hover:underline cursor-pointer" />
+        <CookiesLink className="text-primary-foreground/80 hover:text-gold transition-smooth underline-offset-4 hover:underline cursor-pointer" />
         <a
           href="mailto:pincelesdepalabras@gmail.com"
           className="text-primary-foreground/80 hover:text-gold transition-smooth"
