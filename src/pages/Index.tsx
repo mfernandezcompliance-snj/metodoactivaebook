@@ -106,7 +106,8 @@ const Hero = () => (
 /* ---------- MANIFIESTO ---------- */
 const Manifesto = () => (
   <section className="py-20 md:py-28 bg-card">
-    <div className="container max-w-3xl">
+    <div className="container max-w-6xl grid lg:grid-cols-[1fr_minmax(0,420px)] gap-12 items-start">
+      <div className="max-w-3xl">
       <div className="text-center mb-12">
         <span className="inline-block text-sm tracking-[0.3em] text-terracotta-deep font-semibold mb-3">
           EL MANIFIESTO
