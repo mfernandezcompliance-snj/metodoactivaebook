@@ -775,7 +775,7 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <PortfolioBanner />
-      <Header />
+      {/* Header sticky removido */}
       <Hero />
       <Manifesto />
       <Method />
