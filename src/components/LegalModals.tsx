@@ -60,6 +60,57 @@ export const PrivacyLink = ({ className }: { className?: string }) => (
   </Dialog>
 );
 
+export const CookiesLink = ({ className }: { className?: string }) => (
+  <Dialog>
+    <DialogTrigger className={className}>Política de Cookies</DialogTrigger>
+    <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto bg-card">
+      <DialogHeader>
+        <DialogTitle className="font-serif text-2xl text-primary">
+          Política de Cookies
+        </DialogTitle>
+      </DialogHeader>
+      <p className="text-xs text-muted-foreground italic">
+        Miriam Fernández | Pinceles de Palabras
+      </p>
+      <div className="space-y-5 mt-2">
+        <Section title="¿Qué son las cookies?">
+          Utilizamos cookies para garantizar el funcionamiento técnico de la página y analizar el
+          tráfico de red.
+        </Section>
+        <Section title="Tipos de cookies que utilizamos">
+          <span className="block mb-2">
+            <strong>Cookies Técnicas (Necesarias):</strong> Son fundamentales para que la web
+            funcione correctamente bajo la arquitectura JAMstack, permitiendo una carga ultra-rápida
+            y segura.
+          </span>
+          <span className="block">
+            <strong>Cookies de Análisis y Seguimiento:</strong> Si usted acepta su uso, utilizamos
+            el Píxel de Meta para recopilar información anónima sobre su interacción con nuestra
+            landing page.
+          </span>
+        </Section>
+        <Section title="Base legal y consentimiento">
+          El uso de cookies técnicas es necesario. Para el resto, solicitamos su consentimiento a
+          través del banner inicial.
+        </Section>
+        <Section title="Gestión de cookies">
+          Puede restringir o bloquear las cookies desde su navegador, aunque esto podría afectar la
+          funcionalidad del sitio.
+        </Section>
+        <Section title="Contacto">
+          Para dudas sobre privacidad, escriba a:{" "}
+          <a
+            href="mailto:pincelesdeplabras@gmail.com"
+            className="text-terracotta-deep underline"
+          >
+            pincelesdeplabras@gmail.com
+          </a>
+        </Section>
+      </div>
+    </DialogContent>
+  </Dialog>
+);
+
 export const TermsLink = ({ className }: { className?: string }) => (
   <Dialog>
     <DialogTrigger className={className}>Términos y Condiciones</DialogTrigger>
