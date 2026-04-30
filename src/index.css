@@ -28,15 +28,16 @@
     --muted-foreground: 197 18% 42%;
 
     /* Accent - pastel peach for CTAs */
-    --accent: 22 80% 72%;
-    --accent-foreground: 197 45% 22%;
+    /* Accent - salmon for CTAs (high readability with white text) */
+    --accent: 8 75% 65%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 60% 65%;
     --destructive-foreground: 45 60% 97%;
 
     --border: 150 25% 86%;
     --input: 150 25% 86%;
-    --ring: 22 80% 72%;
+    --ring: 8 75% 65%;
 
     --radius: 1rem;
 
@@ -45,15 +46,15 @@
     --cream-deep: 42 55% 92%;
     --sage: 150 35% 82%;          /* pastel mint */
     --sage-deep: 155 30% 65%;     /* mid sage */
-    --terracotta: 22 80% 72%;     /* pastel peach */
-    --terracotta-deep: 18 65% 60%;/* warm coral */
+    --terracotta: 8 75% 65%;      /* salmon */
+    --terracotta-deep: 6 70% 55%;  /* deep salmon */
     --petrol: 200 55% 88%;        /* icy pastel blue (very soft) */
     --gold: 42 85% 75%;           /* pastel buttercup */
     --sky: 200 60% 92%;           /* almost white sky */
 
     /* Gradients - all pastel */
     --gradient-warm: linear-gradient(135deg, hsl(45 60% 97%) 0%, hsl(42 55% 92%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(22 80% 75%) 0%, hsl(18 70% 65%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(8 80% 68%) 0%, hsl(6 70% 55%) 100%);
     --gradient-petrol: linear-gradient(135deg, hsl(200 60% 92%) 0%, hsl(200 50% 84%) 100%);
     --gradient-sage: linear-gradient(135deg, hsl(150 40% 86%) 0%, hsl(155 32% 72%) 100%);
     --gradient-sky: linear-gradient(135deg, hsl(200 60% 94%) 0%, hsl(150 40% 90%) 100%);
@@ -61,7 +62,7 @@
     /* Shadows - softer */
     --shadow-soft: 0 4px 20px -4px hsl(195 35% 22% / 0.06);
     --shadow-card: 0 8px 30px -8px hsl(195 35% 22% / 0.10);
-    --shadow-cta: 0 10px 30px -8px hsl(22 70% 55% / 0.30);
+    --shadow-cta: 0 10px 30px -8px hsl(8 70% 50% / 0.35);
     --shadow-glow: 0 0 40px hsl(42 85% 78% / 0.45);
 
     /* Transitions */
