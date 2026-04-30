@@ -155,6 +155,15 @@ const Manifesto = () => (
           diseñando algoritmos para retener la atención de tu hijo.
         </p>
       </div>
+      </div>
+      <div className="lg:sticky lg:top-8">
+        <img
+          src={ninosCorriendo}
+          alt="Niños felices corriendo y jugando al aire libre en un parque"
+          className="w-full rounded-3xl shadow-card"
+          loading="lazy"
+        />
+      </div>
     </div>
   </section>
 );
