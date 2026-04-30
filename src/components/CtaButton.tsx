@@ -8,6 +8,7 @@ interface CtaButtonProps {
   size?: "default" | "lg" | "xl";
   variant?: "primary" | "outline";
   showArrow?: boolean;
+  href?: string;
 }
 
 const sizes = {
