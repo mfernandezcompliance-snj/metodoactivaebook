@@ -46,8 +46,8 @@ import bono4 from "@/assets/bono-4.png";
 import bono5 from "@/assets/bono-5.png";
 import badgeGarantia from "@/assets/badge-garantia.png";
 import badgePagoSeguro from "@/assets/badge-pago-seguro.png";
-
-/* Header eliminado por petición del usuario (sin cintillo sticky). */
+import ninosCorriendo from "@/assets/ninos-corriendo.jpg";
+import familiaJugando from "@/assets/familia-jugando.png";
 
 /* ---------- HERO ---------- */
 const Hero = () => (
@@ -106,7 +106,8 @@ const Hero = () => (
 /* ---------- MANIFIESTO ---------- */
 const Manifesto = () => (
   <section className="py-20 md:py-28 bg-card">
-    <div className="container max-w-3xl">
+    <div className="container max-w-6xl grid lg:grid-cols-[1fr_minmax(0,420px)] gap-12 items-start">
+      <div className="max-w-3xl">
       <div className="text-center mb-12">
         <span className="inline-block text-sm tracking-[0.3em] text-terracotta-deep font-semibold mb-3">
           EL MANIFIESTO
@@ -154,6 +155,15 @@ const Manifesto = () => (
           diseñando algoritmos para retener la atención de tu hijo.
         </p>
       </div>
+      </div>
+      <div className="lg:sticky lg:top-8">
+        <img
+          src={ninosCorriendo}
+          alt="Niños felices corriendo y jugando al aire libre en un parque"
+          className="w-full rounded-3xl shadow-card"
+          loading="lazy"
+        />
+      </div>
     </div>
   </section>
 );
@@ -190,11 +200,19 @@ const Method = () => (
           castigos y sin sentirte culpable.
         </p>
       </div>
+
+      <div className="mt-14 max-w-2xl mx-auto">
+        <img
+          src={familiaJugando}
+          alt="Familia jugando junta en el suelo con bloques, libros y juegos de mesa"
+          className="w-full rounded-3xl shadow-card"
+          loading="lazy"
+        />
+      </div>
     </div>
   </section>
 );
 
-/* ---------- BENEFICIOS ---------- */
 const benefits = [
   { icon: Heart, title: "Conexión Real", desc: "Actividades que crean vínculos profundos entre padres e hijos." },
   { icon: Palette, title: "Creatividad", desc: "Juegos que despiertan la imaginación sin necesidad de tecnología." },
