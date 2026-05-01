@@ -249,11 +249,11 @@ const Benefits = () => (
           </div>
         ))}
 
-        <div className="rounded-3xl p-8 bg-primary text-primary-foreground shadow-card flex flex-col justify-center">
-          <Quote className="h-8 w-8 text-gold mb-3" />
+        <div className="rounded-3xl p-8 bg-sage text-primary-foreground shadow-card flex flex-col justify-center">
+          <Quote className="h-8 w-8 text-terracotta-deep mb-3" />
           <p className="font-serif italic text-xl leading-snug">
             "No se trata de prohibir pantallas. Se trata de ofrecer algo{" "}
-            <span className="text-gold not-italic font-semibold">tan irresistible</span>{" "}
+            <span className="text-terracotta-deep not-italic font-semibold">tan irresistible</span>{" "}
             que tu hijo elija soltar el celular por sí mismo."
           </p>
         </div>
@@ -488,7 +488,7 @@ const CountryTable = () => (
       <div className="rounded-3xl overflow-hidden shadow-soft border border-border bg-cream-deep">
         <Table>
           <TableHeader>
-            <TableRow className="bg-primary hover:bg-primary">
+            <TableRow className="bg-sage hover:bg-sage">
               <TableHead className="text-primary-foreground font-bold">País</TableHead>
               <TableHead className="text-primary-foreground font-bold text-right">
                 Equivalencia aproximada
@@ -555,9 +555,9 @@ const Testimonials = () => (
     <div className="container relative">
       <div className="text-center mb-14">
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary inline-flex items-center gap-3">
-          <Star className="h-7 w-7 fill-gold text-gold" />
+          <Star className="h-7 w-7 fill-gold text-terracotta-deep" />
           Familias Felices
-          <Star className="h-7 w-7 fill-gold text-gold" />
+          <Star className="h-7 w-7 fill-gold text-terracotta-deep" />
         </h2>
       </div>
 
@@ -587,7 +587,7 @@ const Testimonials = () => (
             </p>
             <div className="flex justify-center gap-1 mt-auto">
               {[1, 2, 3, 4, 5].map((s) => (
-                <Star key={s} className="h-6 w-6 fill-gold text-gold" />
+                <Star key={s} className="h-6 w-6 fill-gold text-terracotta-deep" />
               ))}
             </div>
           </div>
@@ -672,7 +672,7 @@ const Guarantee = () => (
 
 /* ---------- FINAL CTA ---------- */
 const FinalCta = () => (
-  <section className="relative py-20 md:py-28 bg-primary text-primary-foreground overflow-hidden">
+  <section className="relative py-20 md:py-28 bg-sage text-primary-foreground overflow-hidden">
     <Sun className="absolute top-8 right-8 w-24 md:w-28 opacity-90" />
     <div className="absolute inset-0 opacity-25 pointer-events-none">
       <div className="absolute top-10 left-1/4 w-72 h-72 rounded-full bg-gold/40 blur-3xl" />
@@ -680,9 +680,9 @@ const FinalCta = () => (
     </div>
 
     <div className="container relative max-w-3xl text-center">
-      <Rocket className="h-12 w-12 text-gold mx-auto mb-4 animate-float" />
+      <Rocket className="h-12 w-12 text-terracotta-deep mx-auto mb-4 animate-float" />
       <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6">
-        ¡Es hora de <span className="text-gold italic">actuar</span>!
+        ¡Es hora de <span className="text-terracotta-deep italic">actuar</span>!
       </h2>
       <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed">
         No permitas que un algoritmo decida cómo termina la tarde en tu sala de estar.
@@ -691,9 +691,9 @@ const FinalCta = () => (
 
       <div className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-3xl p-6 md:p-8 mb-8">
         <p className="text-base md:text-lg leading-relaxed">
-          Recuerda: te llevas el método completo + los <strong className="text-gold">5 bonos</strong>{" "}
+          Recuerda: te llevas el método completo + los <strong className="text-terracotta-deep">5 bonos</strong>{" "}
           (valorados en <span className="line-through opacity-70">$53 USD</span>) por solo{" "}
-          <strong className="text-gold text-2xl">$12.99 USD</strong>.
+          <strong className="text-terracotta-deep text-2xl">$12.99 USD</strong>.
         </p>
         <p className="text-sm text-primary-foreground/70 mt-3 inline-flex items-center gap-2 justify-center">
           <Clock className="h-4 w-4" /> Por las próximas 24 horas.
@@ -790,7 +790,7 @@ const Faq = () => (
 
 /* ---------- FOOTER ---------- */
 const Footer = () => (
-  <footer className="bg-primary text-primary-foreground py-12">
+  <footer className="bg-sage text-primary-foreground py-12">
     <div className="container max-w-4xl text-center">
       <div className="inline-flex items-center justify-center bg-cream rounded-3xl p-4 mb-5 shadow-soft">
         <img src={logo} alt="Pinceles de Palabras" className="h-20 w-auto" />
@@ -799,12 +799,12 @@ const Footer = () => (
         © 2026 Pinceles de Palabras. Todos los derechos reservados.
       </p>
       <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center text-sm mb-6">
-        <PrivacyLink className="text-primary-foreground/80 hover:text-gold transition-smooth underline-offset-4 hover:underline cursor-pointer" />
-        <TermsLink className="text-primary-foreground/80 hover:text-gold transition-smooth underline-offset-4 hover:underline cursor-pointer" />
-        <CookiesLink className="text-primary-foreground/80 hover:text-gold transition-smooth underline-offset-4 hover:underline cursor-pointer" />
+        <PrivacyLink className="text-primary-foreground/80 hover:text-terracotta-deep transition-smooth underline-offset-4 hover:underline cursor-pointer" />
+        <TermsLink className="text-primary-foreground/80 hover:text-terracotta-deep transition-smooth underline-offset-4 hover:underline cursor-pointer" />
+        <CookiesLink className="text-primary-foreground/80 hover:text-terracotta-deep transition-smooth underline-offset-4 hover:underline cursor-pointer" />
         <a
           href="mailto:pincelesdepalabras@gmail.com"
-          className="text-primary-foreground/80 hover:text-gold transition-smooth"
+          className="text-primary-foreground/80 hover:text-terracotta-deep transition-smooth"
         >
           Contacto
         </a>
@@ -818,7 +818,7 @@ const Footer = () => (
       <div className="border-t border-primary-foreground/10 pt-5 mt-2">
         <p className="text-xs text-primary-foreground/60">
           Diseño conceptual de portafolio por{" "}
-          <strong className="text-gold">MF Web Design &amp; Compliance</strong>. Producto real y
+          <strong className="text-terracotta-deep">MF Web Design &amp; Compliance</strong>. Producto real y
           propiedad de Pinceles de Palabras.
         </p>
       </div>
