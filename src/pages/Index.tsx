@@ -672,7 +672,7 @@ const Guarantee = () => (
 
 /* ---------- FINAL CTA ---------- */
 const FinalCta = () => (
-  <section className="relative py-20 md:py-28 bg-primary text-primary-foreground overflow-hidden">
+  <section className="relative py-20 md:py-28 bg-sage text-primary-foreground overflow-hidden">
     <Sun className="absolute top-8 right-8 w-24 md:w-28 opacity-90" />
     <div className="absolute inset-0 opacity-25 pointer-events-none">
       <div className="absolute top-10 left-1/4 w-72 h-72 rounded-full bg-gold/40 blur-3xl" />
