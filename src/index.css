@@ -6,64 +6,64 @@
 
 @layer base {
   :root {
-    /* Pastel palette inspired by ebook cover */
-    --background: 45 60% 97%;            /* soft cream */
-    --foreground: 197 35% 22%;           /* deep petrol for text */
+    /* Organic scrapbook palette — cream, mint pastel, peach, terracotta */
+    --background: 42 55% 97%;            /* off-white cream #FCF9F2 */
+    --foreground: 25 30% 22%;            /* warm dark brown for text */
 
     --card: 0 0% 100%;
-    --card-foreground: 197 35% 22%;
+    --card-foreground: 25 30% 22%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 197 35% 22%;
+    --popover-foreground: 25 30% 22%;
 
-    /* Primary - icy pastel blue (soft, readable) */
-    --primary: 200 55% 86%;
-    --primary-foreground: 200 45% 20%;
+    /* Primary - warm dark brown (titles) — high readability */
+    --primary: 25 35% 20%;
+    --primary-foreground: 42 55% 97%;
 
-    /* Secondary - pastel mint/sage */
-    --secondary: 150 35% 82%;
-    --secondary-foreground: 195 40% 25%;
+    /* Secondary - pastel mint */
+    --secondary: 130 35% 85%;
+    --secondary-foreground: 25 35% 22%;
 
     --muted: 40 40% 94%;
-    --muted-foreground: 197 18% 42%;
+    --muted-foreground: 25 18% 40%;
 
-    /* Accent - pastel peach for CTAs */
-    /* Accent - salmon for CTAs (high readability with white text) */
-    --accent: 8 75% 65%;
+    /* Accent - terracotta/soft orange CTAs */
+    --accent: 18 75% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 60% 65%;
-    --destructive-foreground: 45 60% 97%;
+    --destructive-foreground: 42 55% 97%;
 
-    --border: 150 25% 86%;
-    --input: 150 25% 86%;
-    --ring: 8 75% 65%;
+    --border: 30 25% 88%;
+    --input: 30 25% 88%;
+    --ring: 18 75% 60%;
 
-    --radius: 1rem;
+    --radius: 1.5rem;
 
-    /* Custom semantic tokens — all pastel */
-    --cream: 45 60% 97%;
-    --cream-deep: 42 55% 92%;
-    --sage: 150 35% 82%;          /* pastel mint */
-    --sage-deep: 155 30% 65%;     /* mid sage */
-    --terracotta: 8 75% 65%;      /* salmon */
-    --terracotta-deep: 6 70% 55%;  /* deep salmon */
-    --petrol: 200 55% 88%;        /* icy pastel blue (very soft) */
-    --gold: 42 85% 75%;           /* pastel buttercup */
-    --sky: 200 60% 92%;           /* almost white sky */
+    /* Custom semantic tokens — organic pastel */
+    --cream: 42 55% 97%;
+    --cream-deep: 38 50% 93%;
+    --sage: 130 35% 85%;          /* pastel mint #D1E7D1 */
+    --sage-deep: 140 28% 60%;     /* readable mid sage */
+    --peach: 28 70% 88%;           /* pastel peach #F3D5B5 */
+    --terracotta: 18 75% 62%;      /* warm terracotta */
+    --terracotta-deep: 14 65% 48%; /* deep terracotta for text accents */
+    --petrol: 130 35% 85%;         /* alias → mint (used in legacy markup) */
+    --gold: 42 85% 70%;            /* sun yellow */
+    --sky: 200 50% 92%;            /* soft sky */
 
-    /* Gradients - all pastel */
-    --gradient-warm: linear-gradient(135deg, hsl(45 60% 97%) 0%, hsl(42 55% 92%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(8 80% 68%) 0%, hsl(6 70% 55%) 100%);
-    --gradient-petrol: linear-gradient(135deg, hsl(200 60% 92%) 0%, hsl(200 50% 84%) 100%);
-    --gradient-sage: linear-gradient(135deg, hsl(150 40% 86%) 0%, hsl(155 32% 72%) 100%);
-    --gradient-sky: linear-gradient(135deg, hsl(200 60% 94%) 0%, hsl(150 40% 90%) 100%);
+    /* Gradients */
+    --gradient-warm: linear-gradient(180deg, hsl(42 55% 97%) 0%, hsl(38 50% 93%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(20 80% 65%) 0%, hsl(14 70% 52%) 100%);
+    --gradient-petrol: linear-gradient(135deg, hsl(130 38% 88%) 0%, hsl(135 30% 78%) 100%);
+    --gradient-sage: linear-gradient(135deg, hsl(130 38% 88%) 0%, hsl(135 30% 78%) 100%);
+    --gradient-sky: linear-gradient(135deg, hsl(28 70% 92%) 0%, hsl(130 38% 90%) 100%);
 
     /* Shadows - softer */
-    --shadow-soft: 0 4px 20px -4px hsl(195 35% 22% / 0.06);
-    --shadow-card: 0 8px 30px -8px hsl(195 35% 22% / 0.10);
-    --shadow-cta: 0 10px 30px -8px hsl(8 70% 50% / 0.35);
-    --shadow-glow: 0 0 40px hsl(42 85% 78% / 0.45);
+    --shadow-soft: 0 4px 20px -4px hsl(25 30% 22% / 0.06);
+    --shadow-card: 0 10px 35px -10px hsl(25 30% 22% / 0.12);
+    --shadow-cta: 0 10px 30px -8px hsl(14 65% 45% / 0.35);
+    --shadow-glow: 0 0 40px hsl(42 85% 75% / 0.45);
 
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
