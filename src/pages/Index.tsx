@@ -249,7 +249,7 @@ const Benefits = () => (
           </div>
         ))}
 
-        <div className="rounded-3xl p-8 bg-primary text-primary-foreground shadow-card flex flex-col justify-center">
+        <div className="rounded-3xl p-8 bg-sage text-primary-foreground shadow-card flex flex-col justify-center">
           <Quote className="h-8 w-8 text-gold mb-3" />
           <p className="font-serif italic text-xl leading-snug">
             "No se trata de prohibir pantallas. Se trata de ofrecer algo{" "}
