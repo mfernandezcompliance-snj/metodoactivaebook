@@ -16,9 +16,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    /* Primary - pastel mint (used for backgrounds AND headings) */
-    --primary: 130 38% 80%;
-    --primary-foreground: 0 0% 10%;      /* black text over mint backgrounds */
+    /* Primary - black for titles (high readability on cream) */
+    --primary: 0 0% 10%;
+    --primary-foreground: 0 0% 10%;      /* used over mint backgrounds → black */
 
     /* Secondary - pastel mint */
     --secondary: 130 35% 85%;
