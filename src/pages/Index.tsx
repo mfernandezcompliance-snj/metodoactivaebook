@@ -488,7 +488,7 @@ const CountryTable = () => (
       <div className="rounded-3xl overflow-hidden shadow-soft border border-border bg-cream-deep">
         <Table>
           <TableHeader>
-            <TableRow className="bg-petrol hover:bg-petrol">
+            <TableRow className="bg-primary hover:bg-primary">
               <TableHead className="text-primary-foreground font-bold">País</TableHead>
               <TableHead className="text-primary-foreground font-bold text-right">
                 Equivalencia aproximada
