@@ -63,6 +63,8 @@ export default {
         },
         petrol: "hsl(var(--petrol))",
         gold: "hsl(var(--gold))",
+        peach: "hsl(var(--peach))",
+        sky: "hsl(var(--sky))",
       },
       borderRadius: {
         lg: "var(--radius)",

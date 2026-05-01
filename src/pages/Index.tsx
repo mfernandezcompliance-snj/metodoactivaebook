@@ -36,6 +36,7 @@ import { PortfolioBanner } from "@/components/PortfolioBanner";
 import { AuditFloatingButton } from "@/components/AuditFloatingButton";
 import { CookieBanner } from "@/components/CookieBanner";
 import { PrivacyLink, TermsLink, CookiesLink } from "@/components/LegalModals";
+import { Sun, WaveDivider, Blob } from "@/components/Decorations";
 import logo from "@/assets/logo.png";
 import ebookMockup from "@/assets/ebook-mockup.png";
 import bonosPack from "@/assets/bonos-pack.png";
@@ -52,9 +53,10 @@ import familiaJugando from "@/assets/familia-jugando.png";
 /* ---------- HERO ---------- */
 const Hero = () => (
   <section className="relative overflow-hidden gradient-warm pt-12 pb-20 md:pt-20 md:pb-28">
-    <div className="absolute inset-0 opacity-30 pointer-events-none">
-      <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-sage/30 blur-3xl" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-terracotta/20 blur-3xl" />
+    <Sun className="absolute top-6 right-6 md:top-10 md:right-12 w-20 md:w-28 opacity-90 animate-float" />
+    <div className="absolute inset-0 opacity-40 pointer-events-none">
+      <Blob className="absolute -top-10 -left-20 w-[420px]" color="hsl(var(--sage) / 0.45)" />
+      <Blob className="absolute bottom-0 -right-24 w-[460px]" color="hsl(var(--peach) / 0.55)" />
     </div>
 
     <div className="container relative grid lg:grid-cols-2 gap-12 items-center">
@@ -247,7 +249,7 @@ const Benefits = () => (
           </div>
         ))}
 
-        <div className="rounded-3xl p-8 gradient-petrol text-primary-foreground shadow-card flex flex-col justify-center">
+        <div className="rounded-3xl p-8 bg-primary text-primary-foreground shadow-card flex flex-col justify-center">
           <Quote className="h-8 w-8 text-gold mb-3" />
           <p className="font-serif italic text-xl leading-snug">
             "No se trata de prohibir pantallas. Se trata de ofrecer algo{" "}
@@ -486,7 +488,7 @@ const CountryTable = () => (
       <div className="rounded-3xl overflow-hidden shadow-soft border border-border bg-cream-deep">
         <Table>
           <TableHeader>
-            <TableRow className="bg-petrol hover:bg-petrol">
+            <TableRow className="bg-primary hover:bg-primary">
               <TableHead className="text-primary-foreground font-bold">País</TableHead>
               <TableHead className="text-primary-foreground font-bold text-right">
                 Equivalencia aproximada
@@ -514,45 +516,80 @@ const CountryTable = () => (
 /* ---------- TESTIMONIALS ---------- */
 const testimonials = [
   {
-    name: "Familia Rodríguez",
-    text: "Este método ha funcionado de maravilla en casa. Los niños sienten que tienen el control al decidir qué actividad creativa quieren hacer para divertirse. Realmente sí existen alternativas emocionantes para realizar dentro y fuera de casa sin depender del celular. Los primeros días fueron difíciles, pero es cuestión de acostumbrarse. Ahora los incluyo al cocinar, salimos a pasear temprano y las tarjetas de canje ya son parte de nuestra rutina familiar.",
+    name: "Familia Rodríguez.",
+    parts: [
+      { t: 'Este método ha funcionado de maravilla en casa. ', hl: false },
+      { t: 'Los niños sienten que tienen el control', hl: true },
+      { t: ' al decidir qué actividad creativa quieren hacer para divertirse. Realmente sí existen alternativas emocionantes para realizar dentro y fuera de casa ', hl: false },
+      { t: 'sin depender del celular', hl: true },
+      { t: '. Los primeros días fueron difíciles, pero es cuestión de acostumbrarse. Ahora los incluyo al cocinar, salimos a pasear temprano y ', hl: false },
+      { t: 'las tarjetas de canje ya son parte de nuestra rutina familiar', hl: true },
+      { t: '".', hl: false },
+    ],
   },
   {
     name: "Abuela de 8 nietos",
-    text: "Es imposible que se aburran actuando sus cuentos favoritos. Ahora presentan obras de teatro en casa todo el tiempo e incluyen hasta al abuelo. Siento que su creatividad se ha desarrollado aún más. Este ebook no solo logra que dejen el celular, sino que logra que nos divirtamos en familia.",
+    parts: [
+      { t: 'Es imposible que se aburran actuando sus cuentos favoritos. ', hl: false },
+      { t: 'Ahora presentan obras de teatro en casa todo el tiempo e incluyen hasta al abuelo', hl: true },
+      { t: '. Siento que su creatividad se ha desarrollado aún más. Este ebook no solo logra que dejen el celular, ', hl: false },
+      { t: 'sino que logra que nos divirtamos en familia', hl: true },
+      { t: '".', hl: false },
+    ],
   },
   {
-    name: "Tía Mary",
-    text: "A mis sobrinos les encantan los juegos de este ebook, especialmente el de 'irse de viaje'. Imaginarse que están en un safari en África, conocer a los animales y simular el viaje en avión les emociona muchísimo, y a mí me divierte jugar con ellos. Por fin me quité esa preocupación de no saber qué ponerlos a hacer para que dejen el celular.",
+    name: "Tía Mary.",
+    parts: [
+      { t: '"A mis sobrinos les encantan los juegos de este ebook, especialmente el de \'irse de viaje\'. Imaginarse que están en un safari en África, conocer a los animales y simular el viaje en avión les emociona muchísimo, y a mí me divierte jugar con ellos. ', hl: false },
+      { t: 'Por fin me quité esa preocupación de no saber qué ponerlos a hacer para que dejen el celular', hl: true },
+      { t: '".', hl: false },
+    ],
   },
 ];
 
 const Testimonials = () => (
-  <section className="py-20 md:py-28 bg-cream-deep">
-    <div className="container">
+  <section className="relative py-20 md:py-28 bg-mint overflow-hidden">
+    <Blob className="absolute -top-10 -left-16 w-72 opacity-60" color="hsl(var(--gold) / 0.35)" />
+    <Blob className="absolute -bottom-10 -right-16 w-80 opacity-60" color="hsl(var(--peach) / 0.6)" />
+
+    <div className="container relative">
       <div className="text-center mb-14">
-        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/20 text-petrol text-sm font-bold mb-4">
-          <Star className="h-4 w-4 fill-gold text-gold" /> FAMILIAS FELICES
-        </span>
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary">
-          Lo que dicen las familias que <span className="text-terracotta-deep">ya reconectaron</span>
+        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary inline-flex items-center gap-3">
+          <Star className="h-7 w-7 fill-gold text-gold" />
+          Familias Felices
+          <Star className="h-7 w-7 fill-gold text-gold" />
         </h2>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {testimonials.map(({ name, text }) => (
+      <div className="grid md:grid-cols-3 gap-7 max-w-6xl mx-auto">
+        {testimonials.map(({ name, parts }) => (
           <div
             key={name}
-            className="bg-card rounded-3xl p-7 shadow-soft hover:shadow-card transition-smooth flex flex-col"
+            className="bg-card rounded-3xl p-7 md:p-8 shadow-card flex flex-col text-center transition-smooth hover:-translate-y-1"
+            style={{
+              border: "2px dashed hsl(var(--muted-foreground) / 0.35)",
+              outline: "1px solid hsl(var(--border))",
+              outlineOffset: "6px",
+            }}
           >
-            <div className="flex gap-1 mb-4">
+            <h3 className="font-sans font-extrabold text-xl md:text-2xl text-foreground mb-5">
+              {name}
+            </h3>
+            <p className="text-foreground/85 leading-relaxed mb-6 text-[15px] flex-1">
+              {parts.map((p, i) => (
+                <span
+                  key={i}
+                  className={p.hl ? "text-terracotta-deep font-medium" : ""}
+                >
+                  {p.t}
+                </span>
+              ))}
+            </p>
+            <div className="flex justify-center gap-1 mt-auto">
               {[1, 2, 3, 4, 5].map((s) => (
-                <Star key={s} className="h-5 w-5 fill-gold text-gold" />
+                <Star key={s} className="h-6 w-6 fill-gold text-gold" />
               ))}
             </div>
-            <Quote className="h-8 w-8 text-terracotta/40 mb-3" />
-            <p className="text-foreground/80 leading-relaxed mb-5 italic flex-1 text-sm">"{text}"</p>
-            <p className="font-serif text-lg text-primary font-semibold">— {name}</p>
           </div>
         ))}
       </div>
@@ -635,10 +672,11 @@ const Guarantee = () => (
 
 /* ---------- FINAL CTA ---------- */
 const FinalCta = () => (
-  <section className="py-20 md:py-28 gradient-petrol text-primary-foreground relative overflow-hidden">
-    <div className="absolute inset-0 opacity-20 pointer-events-none">
+  <section className="relative py-20 md:py-28 bg-primary text-primary-foreground overflow-hidden">
+    <Sun className="absolute top-8 right-8 w-24 md:w-28 opacity-90" />
+    <div className="absolute inset-0 opacity-25 pointer-events-none">
       <div className="absolute top-10 left-1/4 w-72 h-72 rounded-full bg-gold/40 blur-3xl" />
-      <div className="absolute bottom-10 right-1/4 w-96 h-96 rounded-full bg-terracotta/30 blur-3xl" />
+      <div className="absolute bottom-10 right-1/4 w-96 h-96 rounded-full bg-terracotta/40 blur-3xl" />
     </div>
 
     <div className="container relative max-w-3xl text-center">
@@ -752,7 +790,7 @@ const Faq = () => (
 
 /* ---------- FOOTER ---------- */
 const Footer = () => (
-  <footer className="bg-petrol text-primary-foreground py-12">
+  <footer className="bg-primary text-primary-foreground py-12">
     <div className="container max-w-4xl text-center">
       <div className="inline-flex items-center justify-center bg-cream rounded-3xl p-4 mb-5 shadow-soft">
         <img src={logo} alt="Pinceles de Palabras" className="h-20 w-auto" />
@@ -795,16 +833,25 @@ const Index = () => {
       <PortfolioBanner />
       {/* Header sticky removido */}
       <Hero />
+      <WaveDivider fill="card" className="-mt-1" />
       <Manifesto />
+      <WaveDivider fill="mint" className="-mt-1" />
       <Method />
+      <WaveDivider fill="creamDeep" className="-mt-1" />
       <Benefits />
+      <WaveDivider fill="card" className="-mt-1" />
       <Bonuses />
+      <WaveDivider fill="cream" className="-mt-1" />
       <Pricing />
       <CountryTable />
+      <WaveDivider fill="mint" className="-mt-1" />
       <Testimonials />
+      <WaveDivider fill="card" className="-mt-1" />
       <About />
+      <WaveDivider fill="mint" className="-mt-1" />
       <Guarantee />
       <FinalCta />
+      <WaveDivider fill="creamDeep" className="-mt-1" />
       <Faq />
       <Footer />
       <AuditFloatingButton />
