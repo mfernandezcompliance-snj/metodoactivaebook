@@ -36,6 +36,7 @@ import { PortfolioBanner } from "@/components/PortfolioBanner";
 import { AuditFloatingButton } from "@/components/AuditFloatingButton";
 import { CookieBanner } from "@/components/CookieBanner";
 import { PrivacyLink, TermsLink, CookiesLink } from "@/components/LegalModals";
+import { Sun, WaveDivider, Blob } from "@/components/Decorations";
 import logo from "@/assets/logo.png";
 import ebookMockup from "@/assets/ebook-mockup.png";
 import bonosPack from "@/assets/bonos-pack.png";
