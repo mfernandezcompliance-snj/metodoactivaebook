@@ -790,7 +790,7 @@ const Faq = () => (
 
 /* ---------- FOOTER ---------- */
 const Footer = () => (
-  <footer className="bg-primary text-primary-foreground py-12">
+  <footer className="bg-sage text-primary-foreground py-12">
     <div className="container max-w-4xl text-center">
       <div className="inline-flex items-center justify-center bg-cream rounded-3xl p-4 mb-5 shadow-soft">
         <img src={logo} alt="Pinceles de Palabras" className="h-20 w-auto" />
