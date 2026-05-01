@@ -53,9 +53,10 @@ import familiaJugando from "@/assets/familia-jugando.png";
 /* ---------- HERO ---------- */
 const Hero = () => (
   <section className="relative overflow-hidden gradient-warm pt-12 pb-20 md:pt-20 md:pb-28">
-    <div className="absolute inset-0 opacity-30 pointer-events-none">
-      <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-sage/30 blur-3xl" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-terracotta/20 blur-3xl" />
+    <Sun className="absolute top-6 right-6 md:top-10 md:right-12 w-20 md:w-28 opacity-90 animate-float" />
+    <div className="absolute inset-0 opacity-40 pointer-events-none">
+      <Blob className="absolute -top-10 -left-20 w-[420px]" color="hsl(var(--sage) / 0.45)" />
+      <Blob className="absolute bottom-0 -right-24 w-[460px]" color="hsl(var(--peach) / 0.55)" />
     </div>
 
     <div className="container relative grid lg:grid-cols-2 gap-12 items-center">
