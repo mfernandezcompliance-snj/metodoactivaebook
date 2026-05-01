@@ -833,16 +833,25 @@ const Index = () => {
       <PortfolioBanner />
       {/* Header sticky removido */}
       <Hero />
+      <WaveDivider fill="card" className="-mt-1" />
       <Manifesto />
+      <WaveDivider fill="mint" className="-mt-1" />
       <Method />
+      <WaveDivider fill="creamDeep" className="-mt-1" />
       <Benefits />
+      <WaveDivider fill="card" className="-mt-1" />
       <Bonuses />
+      <WaveDivider fill="cream" className="-mt-1" />
       <Pricing />
       <CountryTable />
+      <WaveDivider fill="mint" className="-mt-1" />
       <Testimonials />
+      <WaveDivider fill="card" className="-mt-1" />
       <About />
+      <WaveDivider fill="mint" className="-mt-1" />
       <Guarantee />
       <FinalCta />
+      <WaveDivider fill="creamDeep" className="-mt-1" />
       <Faq />
       <Footer />
       <AuditFloatingButton />
