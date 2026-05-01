@@ -8,17 +8,17 @@
   :root {
     /* Organic scrapbook palette — cream, mint pastel, peach, terracotta */
     --background: 42 55% 97%;            /* off-white cream #FCF9F2 */
-    --foreground: 25 30% 22%;            /* warm dark brown for text */
+    --foreground: 0 0% 10%;              /* near-black for body text */
 
     --card: 0 0% 100%;
-    --card-foreground: 25 30% 22%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 25 30% 22%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Primary - warm dark brown (titles) — high readability */
-    --primary: 25 35% 20%;
-    --primary-foreground: 42 55% 97%;
+    /* Primary - pastel mint (used for backgrounds AND headings) */
+    --primary: 130 38% 80%;
+    --primary-foreground: 0 0% 10%;      /* black text over mint backgrounds */
 
     /* Secondary - pastel mint */
     --secondary: 130 35% 85%;
