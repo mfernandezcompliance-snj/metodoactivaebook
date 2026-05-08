@@ -381,33 +381,39 @@ const Bonuses = () => (
         />
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {bonuses.map(({ n, img, title, sub, desc }) => (
-          <div
-            key={n}
-            className="bg-cream-deep rounded-3xl p-6 shadow-soft hover:shadow-card transition-smooth hover:-translate-y-1 flex flex-col"
-          >
-            <div className="flex items-start gap-4 mb-4">
-              <div className="shrink-0 w-14 h-14 rounded-2xl gradient-cta flex items-center justify-center text-accent-foreground font-serif text-2xl font-bold shadow-cta">
-                {n}
+      <Carousel opts={{ align: "start", loop: true }} className="max-w-6xl mx-auto px-10">
+        <CarouselContent className="-ml-4">
+          {bonuses.map(({ n, img, title, sub, desc }) => (
+            <CarouselItem key={n} className="pl-4 md:basis-1/2 lg:basis-1/3">
+              <div
+                className="bg-card rounded-3xl p-7 shadow-card flex flex-col text-center h-full transition-smooth hover:-translate-y-1"
+                style={{
+                  border: "2px dashed hsl(var(--muted-foreground) / 0.35)",
+                  outline: "1px solid hsl(var(--border))",
+                  outlineOffset: "6px",
+                }}
+              >
+                <div className="flex items-center justify-center gap-3 mb-3">
+                  <div className="w-12 h-12 rounded-2xl gradient-cta flex items-center justify-center text-accent-foreground font-serif text-xl font-bold shadow-cta">
+                    {n}
+                  </div>
+                  <p className="text-xs font-bold tracking-wider text-terracotta-deep">BONO #{n}</p>
+                </div>
+                <h3 className="font-serif text-xl text-primary leading-tight mb-1">{title}</h3>
+                <p className="text-sm text-muted-foreground italic mb-4">{sub}</p>
+                {img && (
+                  <div className="my-3 flex justify-center">
+                    <img src={img} alt={`Bono ${n}: ${title}`} className="h-44 w-auto object-contain" />
+                  </div>
+                )}
+                <p className="text-foreground/80 leading-relaxed text-sm mt-auto">{desc}</p>
               </div>
-              <div>
-                <p className="text-xs font-bold tracking-wider text-terracotta-deep">BONO #{n}</p>
-                <h3 className="font-serif text-xl text-primary leading-tight">{title}</h3>
-                <p className="text-sm text-muted-foreground italic">{sub}</p>
-              </div>
-            </div>
-
-            {img && (
-              <div className="my-4 flex justify-center">
-                <img src={img} alt={`Bono ${n}: ${title}`} className="h-44 w-auto object-contain" />
-              </div>
-            )}
-
-            <p className="text-foreground/80 leading-relaxed text-sm mt-auto">{desc}</p>
-          </div>
-        ))}
-      </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="-left-2 md:-left-6 bg-card border-terracotta/40 text-terracotta-deep hover:bg-terracotta hover:text-white" />
+        <CarouselNext className="-right-2 md:-right-6 bg-card border-terracotta/40 text-terracotta-deep hover:bg-terracotta hover:text-white" />
+      </Carousel>
     </div>
   </section>
 );
