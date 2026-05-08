@@ -33,6 +33,13 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import { PortfolioBanner } from "@/components/PortfolioBanner";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 import { AuditFloatingButton } from "@/components/AuditFloatingButton";
 import { CookieBanner } from "@/components/CookieBanner";
 import { PrivacyLink, TermsLink, CookiesLink } from "@/components/LegalModals";
