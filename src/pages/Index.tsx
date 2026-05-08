@@ -50,6 +50,58 @@ import badgePagoSeguro from "@/assets/badge-pago-seguro.png";
 import ninosCorriendo from "@/assets/ninos-corriendo.jpg";
 import familiaJugando from "@/assets/familia-jugando.png";
 
+/* ---------- HEADER ---------- */
+const Header = () => {
+  const navLinks = [
+    { label: "El Método", href: "#metodo" },
+    { label: "Beneficios", href: "#beneficios" },
+    { label: "Bonos", href: "#bonos" },
+    { label: "Oferta", href: "#oferta" },
+    { label: "Testimonios", href: "#testimonios" },
+    { label: "FAQ", href: "#faq" },
+  ];
+
+  return (
+    <header className="sticky top-0 z-50 bg-cream/80 backdrop-blur-md border-b border-border/60">
+      <div className="container flex items-center justify-between h-14 md:h-16">
+        <a href="#" className="font-serif text-lg md:text-xl font-bold text-primary hover:text-terracotta-deep transition-smooth">
+          Método A.C.T.I.V.A.
+        </a>
+
+        <nav className="hidden md:flex items-center gap-6">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-foreground/80 hover:text-terracotta-deep transition-smooth"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="https://mfernandezcompliance.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-terracotta/60 text-terracotta-deep text-sm font-semibold hover:bg-terracotta/10 transition-smooth"
+          >
+            Volver a MF WD&C
+          </a>
+        </nav>
+
+        {/* Mobile: solo el botón destacado */}
+        <a
+          href="https://mfernandezcompliance.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="md:hidden inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-terracotta/60 text-terracotta-deep text-xs font-semibold hover:bg-terracotta/10 transition-smooth"
+        >
+          Volver a MF WD&C
+        </a>
+      </div>
+    </header>
+  );
+};
+
 /* ---------- HERO ---------- */
 const Hero = () => (
   <section className="relative overflow-hidden gradient-warm pt-12 pb-20 md:pt-20 md:pb-28">
@@ -172,7 +224,7 @@ const Manifesto = () => (
 
 /* ---------- MÉTODO ---------- */
 const Method = () => (
-  <section className="py-20 md:py-28 gradient-sage relative overflow-hidden">
+  <section id="metodo" className="py-20 md:py-28 gradient-sage relative overflow-hidden">
     <div className="absolute inset-0 bg-cream/40" />
     <div className="container relative max-w-4xl text-center">
       <span className="inline-block text-sm tracking-[0.3em] text-terracotta-deep font-semibold mb-3">
@@ -224,7 +276,7 @@ const benefits = [
 ];
 
 const Benefits = () => (
-  <section className="py-20 md:py-28 bg-cream-deep">
+  <section id="beneficios" className="py-20 md:py-28 bg-cream-deep">
     <div className="container">
       <div className="text-center mb-14 max-w-2xl mx-auto">
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary mb-4">
@@ -302,7 +354,7 @@ const bonuses = [
 ];
 
 const Bonuses = () => (
-  <section className="py-20 md:py-28 bg-card">
+  <section id="bonos" className="py-20 md:py-28 bg-card">
     <div className="container">
       <div className="text-center mb-14 max-w-3xl mx-auto">
         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-terracotta/15 text-terracotta-deep text-sm font-bold mb-4">
@@ -548,7 +600,7 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <section className="relative py-20 md:py-28 bg-mint overflow-hidden">
+  <section id="testimonios" className="relative py-20 md:py-28 bg-mint overflow-hidden">
     <Blob className="absolute -top-10 -left-16 w-72 opacity-60" color="hsl(var(--gold) / 0.35)" />
     <Blob className="absolute -bottom-10 -right-16 w-80 opacity-60" color="hsl(var(--peach) / 0.6)" />
 
@@ -747,7 +799,7 @@ const faqs = [
 ];
 
 const Faq = () => (
-  <section className="py-20 md:py-28 bg-cream-deep">
+  <section id="faq" className="py-20 md:py-28 bg-cream-deep">
     <div className="container max-w-3xl">
       <div className="text-center mb-12">
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary">
@@ -831,7 +883,7 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <PortfolioBanner />
-      {/* Header sticky removido */}
+      <Header />
       <Hero />
       <WaveDivider fill="card" className="-mt-1" />
       <Manifesto />
