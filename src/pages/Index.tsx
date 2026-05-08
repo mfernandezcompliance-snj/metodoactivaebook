@@ -883,7 +883,7 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <PortfolioBanner />
-      {/* Header sticky removido */}
+      <Header />
       <Hero />
       <WaveDivider fill="card" className="-mt-1" />
       <Manifesto />
