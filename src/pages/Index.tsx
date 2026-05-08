@@ -300,8 +300,8 @@ const Benefits = () => (
             key={title}
             className="group bg-card rounded-3xl p-8 shadow-soft hover:shadow-card transition-smooth hover:-translate-y-1"
           >
-            <div className="inline-flex p-4 rounded-2xl gradient-sage mb-5 group-hover:scale-110 transition-bounce">
-              <Icon className="h-7 w-7 text-petrol" strokeWidth={2.2} />
+            <div className="inline-flex p-4 rounded-2xl bg-terracotta mb-5 group-hover:scale-110 transition-bounce shadow-cta">
+              <Icon className="h-7 w-7 text-white" strokeWidth={2.5} />
             </div>
             <h3 className="font-serif text-2xl text-primary mb-2">{title}</h3>
             <p className="text-foreground/75 leading-relaxed">{desc}</p>
