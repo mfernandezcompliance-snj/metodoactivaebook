@@ -33,6 +33,13 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import { PortfolioBanner } from "@/components/PortfolioBanner";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 import { AuditFloatingButton } from "@/components/AuditFloatingButton";
 import { CookieBanner } from "@/components/CookieBanner";
 import { PrivacyLink, TermsLink, CookiesLink } from "@/components/LegalModals";
@@ -113,7 +120,7 @@ const Hero = () => (
 
     <div className="container relative grid lg:grid-cols-2 gap-12 items-center">
       <div className="animate-fade-up text-center lg:text-left">
-        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sage/30 text-petrol text-sm font-semibold mb-6">
+        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-terracotta text-accent-foreground text-sm font-semibold mb-6 shadow-soft">
           <Sparkles className="h-4 w-4" /> Método A.C.T.I.V.A.™
         </span>
         <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-6">
@@ -293,8 +300,8 @@ const Benefits = () => (
             key={title}
             className="group bg-card rounded-3xl p-8 shadow-soft hover:shadow-card transition-smooth hover:-translate-y-1"
           >
-            <div className="inline-flex p-4 rounded-2xl gradient-sage mb-5 group-hover:scale-110 transition-bounce">
-              <Icon className="h-7 w-7 text-petrol" strokeWidth={2.2} />
+            <div className="inline-flex p-4 rounded-2xl bg-terracotta mb-5 group-hover:scale-110 transition-bounce shadow-cta">
+              <Icon className="h-7 w-7 text-white" strokeWidth={2.5} />
             </div>
             <h3 className="font-serif text-2xl text-primary mb-2">{title}</h3>
             <p className="text-foreground/75 leading-relaxed">{desc}</p>
@@ -374,33 +381,39 @@ const Bonuses = () => (
         />
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {bonuses.map(({ n, img, title, sub, desc }) => (
-          <div
-            key={n}
-            className="bg-cream-deep rounded-3xl p-6 shadow-soft hover:shadow-card transition-smooth hover:-translate-y-1 flex flex-col"
-          >
-            <div className="flex items-start gap-4 mb-4">
-              <div className="shrink-0 w-14 h-14 rounded-2xl gradient-cta flex items-center justify-center text-accent-foreground font-serif text-2xl font-bold shadow-cta">
-                {n}
+      <Carousel opts={{ align: "start", loop: true }} className="max-w-6xl mx-auto px-10">
+        <CarouselContent className="-ml-4">
+          {bonuses.map(({ n, img, title, sub, desc }) => (
+            <CarouselItem key={n} className="pl-4 md:basis-1/2 lg:basis-1/3">
+              <div
+                className="bg-card rounded-3xl p-7 shadow-card flex flex-col text-center h-full transition-smooth hover:-translate-y-1"
+                style={{
+                  border: "2px dashed hsl(var(--muted-foreground) / 0.35)",
+                  outline: "1px solid hsl(var(--border))",
+                  outlineOffset: "6px",
+                }}
+              >
+                <div className="flex items-center justify-center gap-3 mb-3">
+                  <div className="w-12 h-12 rounded-2xl gradient-cta flex items-center justify-center text-accent-foreground font-serif text-xl font-bold shadow-cta">
+                    {n}
+                  </div>
+                  <p className="text-xs font-bold tracking-wider text-terracotta-deep">BONO #{n}</p>
+                </div>
+                <h3 className="font-serif text-xl text-primary leading-tight mb-1">{title}</h3>
+                <p className="text-sm text-muted-foreground italic mb-4">{sub}</p>
+                {img && (
+                  <div className="my-3 flex justify-center">
+                    <img src={img} alt={`Bono ${n}: ${title}`} className="h-44 w-auto object-contain" />
+                  </div>
+                )}
+                <p className="text-foreground/80 leading-relaxed text-sm mt-auto">{desc}</p>
               </div>
-              <div>
-                <p className="text-xs font-bold tracking-wider text-terracotta-deep">BONO #{n}</p>
-                <h3 className="font-serif text-xl text-primary leading-tight">{title}</h3>
-                <p className="text-sm text-muted-foreground italic">{sub}</p>
-              </div>
-            </div>
-
-            {img && (
-              <div className="my-4 flex justify-center">
-                <img src={img} alt={`Bono ${n}: ${title}`} className="h-44 w-auto object-contain" />
-              </div>
-            )}
-
-            <p className="text-foreground/80 leading-relaxed text-sm mt-auto">{desc}</p>
-          </div>
-        ))}
-      </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="-left-2 md:-left-6 bg-card border-terracotta/40 text-terracotta-deep hover:bg-terracotta hover:text-white" />
+        <CarouselNext className="-right-2 md:-right-6 bg-card border-terracotta/40 text-terracotta-deep hover:bg-terracotta hover:text-white" />
+      </Carousel>
     </div>
   </section>
 );
@@ -458,7 +471,7 @@ const Pricing = () => {
         </div>
 
         {/* Plans */}
-        <h3 className="text-center font-serif text-2xl md:text-3xl text-primary mb-8">Elige tu plan</h3>
+        <h3 className="text-center font-serif text-2xl md:text-3xl text-primary mb-8">Elige entre</h3>
 
         <div className="grid md:grid-cols-2 gap-6">
           {/* Básico */}
@@ -472,10 +485,6 @@ const Pricing = () => {
               <li className="flex items-center gap-3">
                 <Check className="h-5 w-5 text-sage-deep shrink-0" strokeWidth={3} />
                 <span>Ebook principal Método ACTIVA</span>
-              </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <X className="h-5 w-5 text-destructive/70 shrink-0" />
-                <span>Los 5 bonos tácticos</span>
               </li>
             </ul>
             <CtaButton href="https://pay.hotmart.com/S104739377Y?checkoutMode=10" variant="outline" size="lg" className="w-full" showArrow={false}>
@@ -710,9 +719,9 @@ const Guarantee = () => (
             <strong>7 días de Garantía.</strong> Te devolvemos el{" "}
             <strong className="text-terracotta-deep">100% de tu dinero</strong> sin preguntas.
           </p>
-          <div className="flex items-center justify-center md:justify-start gap-4 mt-6">
-            <img src={badgePagoSeguro} alt="Pago seguro Hotmart - Compra protegida" className="h-24" />
-            <p className="text-sm text-foreground/75 max-w-[200px]">
+          <div className="flex flex-col items-center md:items-start gap-4 mt-8">
+            <img src={badgePagoSeguro} alt="Pago seguro Hotmart - Compra protegida" className="w-64 md:w-72 drop-shadow-xl" />
+            <p className="text-sm text-foreground/75 max-w-[280px] text-center md:text-left">
               <strong>Pago seguro</strong> a través de Hotmart.
             </p>
           </div>
