@@ -120,7 +120,7 @@ const Hero = () => (
 
     <div className="container relative grid lg:grid-cols-2 gap-12 items-center">
       <div className="animate-fade-up text-center lg:text-left">
-        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sage/30 text-petrol text-sm font-semibold mb-6">
+        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-terracotta text-accent-foreground text-sm font-semibold mb-6 shadow-soft">
           <Sparkles className="h-4 w-4" /> Método A.C.T.I.V.A.™
         </span>
         <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-6">
