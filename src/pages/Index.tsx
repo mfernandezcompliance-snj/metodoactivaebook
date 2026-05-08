@@ -50,6 +50,58 @@ import badgePagoSeguro from "@/assets/badge-pago-seguro.png";
 import ninosCorriendo from "@/assets/ninos-corriendo.jpg";
 import familiaJugando from "@/assets/familia-jugando.png";
 
+/* ---------- HEADER ---------- */
+const Header = () => {
+  const navLinks = [
+    { label: "El Método", href: "#metodo" },
+    { label: "Beneficios", href: "#beneficios" },
+    { label: "Bonos", href: "#bonos" },
+    { label: "Oferta", href: "#oferta" },
+    { label: "Testimonios", href: "#testimonios" },
+    { label: "FAQ", href: "#faq" },
+  ];
+
+  return (
+    <header className="sticky top-0 z-50 bg-cream/80 backdrop-blur-md border-b border-border/60">
+      <div className="container flex items-center justify-between h-14 md:h-16">
+        <a href="#" className="font-serif text-lg md:text-xl font-bold text-primary hover:text-terracotta-deep transition-smooth">
+          Método A.C.T.I.V.A.
+        </a>
+
+        <nav className="hidden md:flex items-center gap-6">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-foreground/80 hover:text-terracotta-deep transition-smooth"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="https://mfernandezcompliance.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-terracotta/60 text-terracotta-deep text-sm font-semibold hover:bg-terracotta/10 transition-smooth"
+          >
+            Volver a MF WD&C
+          </a>
+        </nav>
+
+        {/* Mobile: solo el botón destacado */}
+        <a
+          href="https://mfernandezcompliance.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="md:hidden inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-terracotta/60 text-terracotta-deep text-xs font-semibold hover:bg-terracotta/10 transition-smooth"
+        >
+          Volver a MF WD&C
+        </a>
+      </div>
+    </header>
+  );
+};
+
 /* ---------- HERO ---------- */
 const Hero = () => (
   <section className="relative overflow-hidden gradient-warm pt-12 pb-20 md:pt-20 md:pb-28">
