@@ -224,7 +224,7 @@ const Manifesto = () => (
 
 /* ---------- MÉTODO ---------- */
 const Method = () => (
-  <section className="py-20 md:py-28 gradient-sage relative overflow-hidden">
+  <section id="metodo" className="py-20 md:py-28 gradient-sage relative overflow-hidden">
     <div className="absolute inset-0 bg-cream/40" />
     <div className="container relative max-w-4xl text-center">
       <span className="inline-block text-sm tracking-[0.3em] text-terracotta-deep font-semibold mb-3">
