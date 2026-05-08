@@ -276,7 +276,7 @@ const benefits = [
 ];
 
 const Benefits = () => (
-  <section className="py-20 md:py-28 bg-cream-deep">
+  <section id="beneficios" className="py-20 md:py-28 bg-cream-deep">
     <div className="container">
       <div className="text-center mb-14 max-w-2xl mx-auto">
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary mb-4">
@@ -354,7 +354,7 @@ const bonuses = [
 ];
 
 const Bonuses = () => (
-  <section className="py-20 md:py-28 bg-card">
+  <section id="bonos" className="py-20 md:py-28 bg-card">
     <div className="container">
       <div className="text-center mb-14 max-w-3xl mx-auto">
         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-terracotta/15 text-terracotta-deep text-sm font-bold mb-4">
@@ -600,7 +600,7 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <section className="relative py-20 md:py-28 bg-mint overflow-hidden">
+  <section id="testimonios" className="relative py-20 md:py-28 bg-mint overflow-hidden">
     <Blob className="absolute -top-10 -left-16 w-72 opacity-60" color="hsl(var(--gold) / 0.35)" />
     <Blob className="absolute -bottom-10 -right-16 w-80 opacity-60" color="hsl(var(--peach) / 0.6)" />
 
@@ -799,7 +799,7 @@ const faqs = [
 ];
 
 const Faq = () => (
-  <section className="py-20 md:py-28 bg-cream-deep">
+  <section id="faq" className="py-20 md:py-28 bg-cream-deep">
     <div className="container max-w-3xl">
       <div className="text-center mb-12">
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary">
