@@ -471,7 +471,7 @@ const Pricing = () => {
         </div>
 
         {/* Plans */}
-        <h3 className="text-center font-serif text-2xl md:text-3xl text-primary mb-8">Elige tu plan</h3>
+        <h3 className="text-center font-serif text-2xl md:text-3xl text-primary mb-8">Elige entre</h3>
 
         <div className="grid md:grid-cols-2 gap-6">
           {/* Básico */}
