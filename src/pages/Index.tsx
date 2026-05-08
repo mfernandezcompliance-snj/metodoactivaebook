@@ -719,9 +719,9 @@ const Guarantee = () => (
             <strong>7 días de Garantía.</strong> Te devolvemos el{" "}
             <strong className="text-terracotta-deep">100% de tu dinero</strong> sin preguntas.
           </p>
-          <div className="flex items-center justify-center md:justify-start gap-4 mt-6">
-            <img src={badgePagoSeguro} alt="Pago seguro Hotmart - Compra protegida" className="h-24" />
-            <p className="text-sm text-foreground/75 max-w-[200px]">
+          <div className="flex flex-col items-center md:items-start gap-4 mt-8">
+            <img src={badgePagoSeguro} alt="Pago seguro Hotmart - Compra protegida" className="w-64 md:w-72 drop-shadow-xl" />
+            <p className="text-sm text-foreground/75 max-w-[280px] text-center md:text-left">
               <strong>Pago seguro</strong> a través de Hotmart.
             </p>
           </div>
