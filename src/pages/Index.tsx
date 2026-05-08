@@ -486,10 +486,6 @@ const Pricing = () => {
                 <Check className="h-5 w-5 text-sage-deep shrink-0" strokeWidth={3} />
                 <span>Ebook principal Método ACTIVA</span>
               </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <X className="h-5 w-5 text-destructive/70 shrink-0" />
-                <span>Los 5 bonos tácticos</span>
-              </li>
             </ul>
             <CtaButton href="https://pay.hotmart.com/S104739377Y?checkoutMode=10" variant="outline" size="lg" className="w-full" showArrow={false}>
               Quiero el básico
