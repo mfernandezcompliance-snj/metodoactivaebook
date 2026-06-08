@@ -37,9 +37,7 @@ export const CookieBanner = () => {
           <div className="flex-1">
             <h3 className="font-serif text-lg text-primary mb-1">Aviso de Cookies</h3>
             <p className="text-sm text-foreground/80 leading-relaxed">
-              En cumplimiento con la <strong>Ley 81 de Protección de Datos Personales</strong>,
-              utilizamos cookies básicas para mejorar tu experiencia y analizar el tráfico de forma
-              anónima. No vendemos ni compartimos tus datos con terceros.
+              Para ofrecer las mejores experiencias, utilizamos tecnologías como las cookies.
             </p>
           </div>
           <button
